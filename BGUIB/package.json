@@ -1,0 +1,15 @@
+{
+  "name": "bgui-regional-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Benishangul-Gumuz Regional State Urban and Infrastructure Bureau Portal with Staff/Admin CMS",
+  "scripts": {
+    "dev": "npx wrangler pages dev ./public --d1=DB --r2=BUCKET --local",
+    "deploy": "npx wrangler pages deploy ./public",
+    "db:init:local": "npx wrangler d1 execute bgui_db --local --file=./schema.sql",
+    "db:init:remote": "npx wrangler d1 execute bgui_db --remote --file=./schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

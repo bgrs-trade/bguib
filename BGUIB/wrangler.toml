@@ -1,0 +1,17 @@
+name = "bgui-regional-portal"
+compatibility_date = "2026-06-01"
+pages_build_output_dir = "./public"
+
+[vars]
+JWT_SECRET = "change-this-to-a-strong-random-secret-key-in-cloudflare-dashboard"
+
+# Bind your Cloudflare D1 Database (Create in Cloudflare Dashboard -> Workers & Pages -> D1)
+[[d1_databases]]
+binding = "DB"
+database_name = "bgui_db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+# Bind your Cloudflare R2 Bucket for PDF/DOCX/Image Attachments (Create in Dashboard -> R2)
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "bgui-files"
